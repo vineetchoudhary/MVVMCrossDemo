@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="222">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tip View Controller-->
+        <scene sceneID="221">
+            <objects>
+                <viewController storyboardIdentifier="TipViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="222" customClass="TipViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="219"/>
+                        <viewControllerLayoutGuide type="bottom" id="220"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="223">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="770" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="171.5" y="351.5" width="71" height="30"/>
+                                <state key="normal" title="Next Page"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="226">
+                                <rect key="frame" x="20" y="30" width="84" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sub Total" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="453">
+                                <rect key="frame" x="20" y="63.5" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Generous?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="454">
+                                <rect key="frame" x="20" y="113.5" width="139" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="455">
+                                <rect key="frame" x="20" y="147.5" width="376" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The tip is: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="456">
+                                <rect key="frame" x="20" y="197.5" width="89" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="457">
+                                <rect key="frame" x="148.5" y="231.5" width="117" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="769" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="149.5" y="311.5" width="115" height="30"/>
+                                <state key="normal" title="Command Demo"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="226" firstAttribute="top" secondItem="219" secondAttribute="bottom" constant="10" id="227"/>
+                            <constraint firstItem="226" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin" id="229"/>
+                            <constraint firstItem="453" firstAttribute="top" secondItem="226" secondAttribute="bottom" constant="10" id="458"/>
+                            <constraint firstItem="453" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin" id="459"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="453" secondAttribute="trailing" id="460"/>
+                            <constraint firstItem="454" firstAttribute="top" secondItem="453" secondAttribute="bottom" constant="20" id="461"/>
+                            <constraint firstItem="454" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin" id="462"/>
+                            <constraint firstItem="455" firstAttribute="top" secondItem="454" secondAttribute="bottom" constant="10" id="463"/>
+                            <constraint firstItem="455" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin" constant="2" id="464"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="455" secondAttribute="trailing" id="465"/>
+                            <constraint firstItem="456" firstAttribute="top" secondItem="455" secondAttribute="bottom" constant="20" id="466"/>
+                            <constraint firstItem="456" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin" id="467"/>
+                            <constraint firstItem="457" firstAttribute="top" secondItem="456" secondAttribute="bottom" constant="10" id="468"/>
+                            <constraint firstAttribute="centerX" secondItem="457" secondAttribute="centerX" id="470"/>
+                            <constraint id="771" firstItem="769" firstAttribute="top" secondItem="457" secondAttribute="bottom" constant="20"/>
+                            <constraint id="772" firstItem="223" firstAttribute="centerX" secondItem="769" secondAttribute="centerX"/>
+                            <constraint id="773" firstItem="770" firstAttribute="top" secondItem="769" secondAttribute="bottom" constant="10"/>
+                            <constraint id="774" firstItem="223" firstAttribute="centerX" secondItem="770" secondAttribute="centerX"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="505" appends="YES" id="506"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="GenerousSlider" destination="455" id="name-outlet-455"/>
+                        <outlet property="NewLabel" destination="456" id="name-outlet-456"/>
+                        <outlet property="SubTotalTextField" destination="453" id="name-outlet-453"/>
+                        <outlet property="TapGesture" destination="505" id="name-outlet-505"/>
+                        <outlet property="TipLabel" destination="457" id="name-outlet-457"/>
+                        <outlet property="CommandButton" destination="769" id="name-outlet-769"/>
+                        <outlet property="NextPageButton" destination="770" id="name-outlet-770"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="224" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="505">
+                    <connections>
+                        <action selector="TapGestureRecognized:" destination="222" id="508"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-758" y="-374"/>
+        </scene>
+        <scene sceneID="2158">
+            <objects>
+                <viewController id="2159" sceneMemberID="viewController" customClass="NextViewController" storyboardIdentifier="NextViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2156"/>
+                        <viewControllerLayoutGuide type="bottom" id="2157"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2160">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2163" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="186" y="358" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="2164" firstItem="2163" firstAttribute="centerX" secondItem="2160" secondAttribute="centerX"/>
+                            <constraint id="2165" firstItem="2160" firstAttribute="centerY" secondItem="2163" secondAttribute="centerY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MainLabel" destination="2163" id="name-outlet-2163"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2161" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="-387"/>
+        </scene>
+        <scene sceneID="7497">
+            <objects>
+                <viewController id="7498" sceneMemberID="viewController" customClass="TipDetailViewController" storyboardIdentifier="TipDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7495"/>
+                        <viewControllerLayoutGuide type="bottom" id="7496"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7499">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7502" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="30" width="71.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7503" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="352" y="30" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Ammount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7504" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="60.5" width="103" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7505" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="352" y="60.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7514" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="101.5" width="37.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7515" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="352" y="101.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="10726" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="90.5" width="374" height="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+                                <constraints>
+                                    <constraint id="10732" firstItem="10726" firstAttribute="height" constant="1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="7506" firstItem="7502" firstAttribute="top" secondItem="7495" secondAttribute="bottom" constant="10"/>
+                            <constraint id="7507" firstItem="7502" firstAttribute="leading" secondItem="7499" secondAttribute="leadingMargin"/>
+                            <constraint id="7508" firstItem="7503" firstAttribute="centerY" secondItem="7502" secondAttribute="centerY"/>
+                            <constraint id="7510" firstItem="7505" firstAttribute="centerY" secondItem="7504" secondAttribute="centerY"/>
+                            <constraint id="7512" firstItem="7504" firstAttribute="top" secondItem="7502" secondAttribute="bottom" constant="10"/>
+                            <constraint id="7513" firstItem="7504" firstAttribute="leading" secondItem="7499" secondAttribute="leadingMargin"/>
+                            <constraint id="7516" firstItem="7515" firstAttribute="centerY" secondItem="7514" secondAttribute="centerY"/>
+                            <constraint id="7519" firstItem="7514" firstAttribute="leading" secondItem="7499" secondAttribute="leadingMargin"/>
+                            <constraint id="7521" firstItem="7499" firstAttribute="trailingMargin" secondItem="7503" secondAttribute="trailing"/>
+                            <constraint id="7522" firstItem="7499" firstAttribute="trailingMargin" secondItem="7505" secondAttribute="trailing"/>
+                            <constraint id="7523" firstItem="7499" firstAttribute="trailingMargin" secondItem="7515" secondAttribute="trailing"/>
+                            <constraint id="10727" firstItem="10726" firstAttribute="centerY" secondItem="7504" secondAttribute="bottom" constant="10"/>
+                            <constraint id="10728" firstItem="7514" firstAttribute="top" secondItem="10726" secondAttribute="bottom" constant="10"/>
+                            <constraint id="10729" firstItem="10726" firstAttribute="leading" secondItem="7504" secondAttribute="leading"/>
+                            <constraint id="10730" firstItem="7499" firstAttribute="trailingMargin" secondItem="10726" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SubTotalLabel" destination="7503" id="name-outlet-7503"/>
+                        <outlet property="TipLabel" destination="7505" id="name-outlet-7505"/>
+                        <outlet property="TotalLabel" destination="7515" id="name-outlet-7515"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7500" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="-390"/>
+        </scene>
+    </scenes>
+</document>
