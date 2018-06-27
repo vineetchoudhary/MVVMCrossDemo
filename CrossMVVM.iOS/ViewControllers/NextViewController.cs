@@ -4,12 +4,15 @@ using System;
 using UIKit;
 using CrossMVVM.ViewModels;
 using MvvmCross.Binding.BindingContext;
+using CrossMVVM.Models;
+using MvvmCross.Platforms.Ios.Binding.Views;
 
 namespace CrossMVVM.iOS
 {
     [MvxFromStoryboard("Tip")]
     public partial class NextViewController : MvxViewController<NextViewModel>
     {
+        private NextTableViewSource _nextTableViewSource;
         public NextViewController (IntPtr handle) : base (handle)
         {
 
@@ -23,28 +26,29 @@ namespace CrossMVVM.iOS
             ArticleTableView.EstimatedRowHeight = 50f;
             ArticleTableView.RowHeight = UITableView.AutomaticDimension;
 
+            _nextTableViewSource = new NextTableViewSource(ArticleTableView);
+            ArticleTableView.Source = _nextTableViewSource;
+
             //Binding
             var set = this.CreateBindingSet<NextViewController, NextViewModel>();
             set.Bind(this).For(v => v.Title).To(vm => vm.Title);
-            set.Bind(ArticleTableView).For(v => v.Source).To(vm => vm.Articles);
+            set.Bind(_nextTableViewSource).For(v => v.ItemsSource).To(vm => vm.Articles);
             set.Apply();
         }
     }
 
-    public class NextTableViewSource : MvxExpandableTableViewSource
+    public class NextTableViewSource : MvxTableViewSource
     {
         public NextTableViewSource(UITableView tableView) : base(tableView)
         {
+            tableView.RegisterClassForCellReuse(typeof(ArticleTableViewCell), nameof(ArticleTableViewCell));
         }
 
         protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath, object item)
         {
-            throw new NotImplementedException();
-        }
-
-        protected override UITableViewCell GetOrCreateHeaderCellFor(UITableView tableView, nint section)
-        {
-            throw new NotImplementedException();
+            var cell = tableView.DequeueReusableCell(nameof(ArticleTableViewCell), indexPath) as ArticleTableViewCell;
+            cell.ConfigCell(item as Article);
+            return cell;
         }
     }
 }

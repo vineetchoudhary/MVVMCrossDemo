@@ -30,7 +30,9 @@ namespace CrossMVVM.ViewModels
         public override async Task Initialize()
         {
             await base.Initialize();
-            Articles.AddRange(await ArticleService.GetArticlesAsync());
+            var articles = await ArticleService.GetArticlesAsync();
+            if (articles != null)
+                Articles = new MvxObservableCollection<Article>(articles);
         }
 
         public NextViewModel(IMvxNavigationService mvxNavigationService)
