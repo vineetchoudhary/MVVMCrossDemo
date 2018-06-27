@@ -16,13 +16,13 @@ namespace CrossMVVM.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel MainLabel { get; set; }
+        UIKit.UITableView ArticleTableView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (MainLabel != null) {
-                MainLabel.Dispose ();
-                MainLabel = null;
+            if (ArticleTableView != null) {
+                ArticleTableView.Dispose ();
+                ArticleTableView = null;
             }
         }
     }
