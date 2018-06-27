@@ -1,6 +1,5 @@
 ﻿using CrossMVVM.Models.TipDetails;
 using CrossMVVM.Services;
-using CrossMVVM.ViewModelResult;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using CrossMVVM.Models.TipDetails;
-using CrossMVVM.ViewModelResult;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
