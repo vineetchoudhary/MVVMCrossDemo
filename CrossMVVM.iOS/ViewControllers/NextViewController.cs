@@ -6,13 +6,16 @@ using CrossMVVM.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using CrossMVVM.Models;
 using MvvmCross.Platforms.Ios.Binding.Views;
+using Common.iOS;
+using Common.RestClient;
 
 namespace CrossMVVM.iOS
 {
     [MvxFromStoryboard("Tip")]
-    public partial class NextViewController : MvxViewController<NextViewModel>
+    public partial class NextViewController : BaseViewController<NextViewModel>
     {
         private NextTableViewSource _nextTableViewSource;
+        
         public NextViewController (IntPtr handle) : base (handle)
         {
 
@@ -21,7 +24,6 @@ namespace CrossMVVM.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
             //TableView
             ArticleTableView.EstimatedRowHeight = 50f;
             ArticleTableView.RowHeight = UITableView.AutomaticDimension;
@@ -33,6 +35,7 @@ namespace CrossMVVM.iOS
             var set = this.CreateBindingSet<NextViewController, NextViewModel>();
             set.Bind(this).For(v => v.Title).To(vm => vm.Title);
             set.Bind(_nextTableViewSource).For(v => v.ItemsSource).To(vm => vm.Articles);
+            set.Bind(_loader).For(v => v.Show).To(vm => vm.IsBusy);
             set.Apply();
         }
     }

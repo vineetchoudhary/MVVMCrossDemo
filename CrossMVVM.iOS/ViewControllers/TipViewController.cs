@@ -20,6 +20,7 @@ namespace CrossMVVM.iOS
         {
             base.ViewDidLoad();
 
+            Include(SubTotalTextField);
             var set = this.CreateBindingSet<TipViewController, TipViewModel>();
             set.Bind(this).For(v => v.Title).To(vm => vm.Title);
             set.Bind(TipLabel).To(vm => vm.Tip);
@@ -29,6 +30,13 @@ namespace CrossMVVM.iOS
             set.Bind(CommandButton).To(vm => vm.ShowTipDetailsCommand);
             set.Apply();
         }
+        public void Include(UITextField textField)
+        {
+            textField.Text = textField.Text + "";
+            textField.EditingChanged += (sender, args) => { textField.Text = textField.Text; };
+            textField.EditingDidEnd += (sender, args) => { textField.Text = textField.Text; };
+        }
+
 
         public override void ViewWillAppear(bool animated)
         {

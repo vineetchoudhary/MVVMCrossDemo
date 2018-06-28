@@ -13,7 +13,7 @@ namespace CrossMVVM.Services
         public readonly RestClient RestClient = RestClient.Default;
         public async Task<List<Article>> GetArticlesAsync()
         {
-            await Task.Delay(3);
+            await Task.Delay(3000);
             return await RestClient.Request<List<Article>>("http://192.168.22.12:9999/articles", HttpMethod.Get);
         }
     }

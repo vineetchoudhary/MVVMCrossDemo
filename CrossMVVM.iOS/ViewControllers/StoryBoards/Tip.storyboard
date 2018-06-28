@@ -19,9 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="770" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="170.5" y="342.5" width="73" height="32"/>
+                                <rect key="frame" x="20" y="299" width="374" height="32"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
-                                <state key="normal" title="Next Page"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0.0392156862745098" green="0.37647058823529411" blue="1" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.29411764705882354" green="0.58823529411764708" blue="1" alpha="1"/>
+                                <state key="normal" title="Articles">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="226">
                                 <rect key="frame" x="20" y="30" width="76.5" height="23.5"/>
@@ -44,21 +48,24 @@
                                 <rect key="frame" x="20" y="147.5" width="376" height="31"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The tip is: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="456">
-                                <rect key="frame" x="20" y="197.5" width="85" height="23.5"/>
+                                <rect key="frame" x="20" y="213.5" width="85" height="23.5"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="457">
-                                <rect key="frame" x="165" y="231" width="84.5" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="457" minimumScaleFactor="0.5">
+                                <rect key="frame" x="105" y="197" width="289" height="50"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="769" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="147" y="300.5" width="120" height="32"/>
+                                <rect key="frame" x="20" y="257" width="374" height="32"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
-                                <state key="normal" title="Command Demo"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.29411764705882354" green="0.58823529411764708" blue="1" alpha="1"/>
+                                <state key="normal" title="Total">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,14 +80,18 @@
                             <constraint firstItem="455" firstAttribute="top" secondItem="454" secondAttribute="bottom" constant="10" id="463"/>
                             <constraint firstItem="455" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin" constant="2" id="464"/>
                             <constraint firstAttribute="trailingMargin" secondItem="455" secondAttribute="trailing" id="465"/>
-                            <constraint firstItem="456" firstAttribute="top" secondItem="455" secondAttribute="bottom" constant="20" id="466"/>
                             <constraint firstItem="456" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin" id="467"/>
-                            <constraint firstItem="457" firstAttribute="top" secondItem="456" secondAttribute="bottom" constant="10" id="468"/>
-                            <constraint firstAttribute="centerX" secondItem="457" secondAttribute="centerX" id="470"/>
-                            <constraint id="771" firstItem="769" firstAttribute="top" secondItem="457" secondAttribute="bottom" constant="20"/>
-                            <constraint id="772" firstItem="223" firstAttribute="centerX" secondItem="769" secondAttribute="centerX"/>
+                            <constraint id="771" firstItem="769" firstAttribute="top" secondItem="457" secondAttribute="bottom" constant="10"/>
                             <constraint id="773" firstItem="770" firstAttribute="top" secondItem="769" secondAttribute="bottom" constant="10"/>
                             <constraint id="774" firstItem="223" firstAttribute="centerX" secondItem="770" secondAttribute="centerX"/>
+                            <constraint id="17576" firstItem="223" firstAttribute="trailingMargin" secondItem="457" secondAttribute="trailing"/>
+                            <constraint id="17577" firstItem="769" firstAttribute="leading" secondItem="223" secondAttribute="leadingMargin"/>
+                            <constraint id="17578" firstItem="223" firstAttribute="trailingMargin" secondItem="769" secondAttribute="trailing"/>
+                            <constraint id="18261" firstItem="770" firstAttribute="leading" secondItem="769" secondAttribute="leading"/>
+                            <constraint id="18262" firstItem="769" firstAttribute="trailing" secondItem="770" secondAttribute="trailing"/>
+                            <constraint id="18608" firstItem="457" firstAttribute="top" secondItem="455" secondAttribute="bottom" constant="20"/>
+                            <constraint id="18610" firstItem="457" firstAttribute="bottom" secondItem="456" secondAttribute="bottom" constant="10"/>
+                            <constraint id="18611" firstItem="457" firstAttribute="leading" secondItem="456" secondAttribute="trailing"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="505" appends="YES" id="506"/>

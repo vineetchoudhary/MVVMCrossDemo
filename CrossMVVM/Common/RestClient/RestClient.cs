@@ -63,13 +63,14 @@ namespace Common.RestClient
             if (response?.IsSuccessStatusCode ?? false)
             {
                 var responseString = await response.Content.ReadAsStringAsync();
+                DLog.Success($"{logString}Response Data - {responseString}");
+
                 if (!String.IsNullOrEmpty(responseString))
                 {
                     var result = JsonConvert.DeserializeObject<TResult>(responseString);
                     return result;
                 }
 
-                DLog.Success($"{logString}Response Data - {responseString}");
                 CurrentRequestState = RequestState.Success;
                 return default(TResult);
             }
