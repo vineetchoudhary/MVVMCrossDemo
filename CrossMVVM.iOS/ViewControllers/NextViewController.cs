@@ -41,7 +41,7 @@ namespace CrossMVVM.iOS
     {
         public NextTableViewSource(UITableView tableView) : base(tableView)
         {
-            tableView.RegisterClassForCellReuse(typeof(ArticleTableViewCell), nameof(ArticleTableViewCell));
+            //tableView.RegisterClassForCellReuse(typeof(ArticleTableViewCell), nameof(ArticleTableViewCell));
         }
 
         protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath, object item)

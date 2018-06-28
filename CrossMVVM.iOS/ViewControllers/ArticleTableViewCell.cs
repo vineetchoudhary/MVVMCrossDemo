@@ -2,11 +2,13 @@
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
+using MvvmCross.Platforms.Ios.Views;
 using System;
 using UIKit;
 
 namespace CrossMVVM.iOS
 {
+    //[MvxFromStoryboard("Tip")]
     public partial class ArticleTableViewCell : MvxTableViewCell
     {
         public ArticleTableViewCell(IntPtr handle) : base(handle)
@@ -16,8 +18,8 @@ namespace CrossMVVM.iOS
         
         public void ConfigCell(Article article)
         {
-            this.DelayBind(() => { this.AddBindings(TitleLabel, "This Text"); });
-            this.DelayBind(() => { this.AddBindings(ContentLabel, "This Text"); });
+            TitleLabel.Text = article.Title;
+            ContentLabel.Text = article.Content;
         }
         
         
